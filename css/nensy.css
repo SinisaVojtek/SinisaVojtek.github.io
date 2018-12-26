@@ -1,0 +1,146 @@
+/*------------------------ NEW FLEX DESIGN  ------------------------*/
+
+body{
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+p, h1, h4, h3{
+	font-weight:normal;
+	color:#777;
+}
+h1{
+	font-size:38.5px;
+}
+h3{
+	font-size:25.5px;
+}
+p{
+	text-align:justify;
+}
+h4{
+	font-size:17.5px;
+}
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  text-align:justify;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.main {
+  justify-content: center;
+}
+
+.aside-1 {
+  justify-content: center;
+  max-width:310px;
+}
+
+.aside-2 {
+  justify-content: center;
+}
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 4 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item{
+  width: 200px;
+  height: auto;
+  margin-top: 10px; 
+  line-height: 25px;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.flex-item:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.picsmall, .picmedium, .piclarge, .picmin{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+.picmin{
+	max-width:100px;
+}
+.picsmall{
+	max-width:200px;
+}
+.picmedium{
+	max-width:250px;
+}
+.piclarge{
+	max-width:300px;
+}
+.stdlist{
+	padding-left:25px;
+}
+.picframe{
+	max-width:300px;
+	max-height:300px;
+	display:block;
+	padding:5px;
+	border-style: solid 2px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #696969;
+  color: white;
+  text-align: center;
+}
+.nutrition{
+	background-color:#ace600; 
+	border-radius:15px; 
+	padding:5px;
+	margin:10px;
+	text-align:center;
+}
+.nutrition h4{
+	color:white; 
+}
+.header {
+  overflow: hidden;
+  background-color: #4484ce;
+  padding: 20px 10px;
+}
